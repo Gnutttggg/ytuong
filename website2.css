@@ -1,0 +1,115 @@
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077ff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 110px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+audio {
+  width: 50%;
+  margin: 0 auto;
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.grid-item {
+  flex: 1 0 20%;
+  background-color: #aliceblue;
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    flex-basis: 33.33%;
+  }
+}
+
+#audioPlayer {
+  position: fixed;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+}
+
+#recordedAudio {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  display: block;
+}
+
+
+.upload-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+#uploadButton {
+  background-color: blue;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  border: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 24px;
+}
+
+
+#recordButtonOverlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  border: none;
+  z-index: 2;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+
+
+#overlay {
+  position: absolute;
+  bottom: 120px;
+  left: 20%;
+  width: 60%;
+  height: 10%;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 1000;
+}
+This creates a transparent rectangle that covers the entire screen and has a z-index of 1, which means it will be on top of all other elements. The pointer-events: none; line ensures that the rectangle doesn't capture any mouse events, allowing the buttons underneath to still be clickable.
+
+
+
+
+
