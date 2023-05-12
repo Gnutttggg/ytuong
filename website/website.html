@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>Record Audio</title>
+    <style>
+      .button-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+      
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: dred;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        border: none;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 20px); /* subtract margin from height */
+        margin-bottom: 20px; /* add margin to bottom */
+      }
+
+      .grid-item {
+        width: 150px;
+        height: 150px;
+        background-color: yellow;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        cursor: pointer;
+      }
+      
+    </style>
+
+  </head>
+  <body>
+    <div class="button-container">
+      <button id="recordButton"><i class="fas fa-microphone"></i></button>
+    </div>
+    <div id="overlay"></div>
+
+    <div id="recordButtonOverlay"></div>
+
+
+    <audio id="audioPlayer" controls></audio>
+    <audio id="recordedAudio" controls></audio>
+    <audio id="playback" controls></audio>
+
+
+
+    <div class="container">
+      <div class="grid-item" onclick="playAudio('file:///C:/Users/Tung Do/Downloads/boogie-funk-disco_9040792.mp3')">beat</div>
+    </div>
+    <div id="timer">00:00:000</div>
+    <div id="recStart">Bắt đầu recording: </div>
+    <div id="recStop">Kết thúc recording: </div>
+
+
+    <div class="upload-container">
+      <button id="uploadButton"><i class="fas fa-upload"></i></button>
+    </div>
+
+
+    <script src="website2.js"></script>
+    <script src="uploadbutton2.js"></script>
+    <script src="timer2.js"></script>
+    <script src="recording2.js"></script>
+    <script src="playback2.js"></script>
+    <script src="buffer2.js"></script>
+
+
+  </body>
+</html>
+
+
